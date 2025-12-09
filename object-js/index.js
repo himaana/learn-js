@@ -62,3 +62,29 @@ for (let props in salaries) {
   sum = sum + salaries[props];
 }
 console.log(sum);
+
+/*
+    Task 4
+    Multiply numeric property values by 2
+    Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+    
+    Note that multiplyNumeric does not need to return anything. It should modify the object in-place. 
+
+    P.S. Use typeof to check for a number here.
+*/
+function multiplyNumeric(obj) {
+  for (let props in obj) {
+    if (typeof obj[props] == "number") {
+      obj[props] = obj[props] * 2;
+    }
+  }
+}
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My Menu",
+};
+
+multiplyNumeric(menu);
+console.log(menu);
