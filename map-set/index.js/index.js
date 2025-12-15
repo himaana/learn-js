@@ -42,3 +42,29 @@ function aclean(arr) {
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
 console.log(aclean(arr));
+
+/* 
+    Task 3
+    Iterable keys
+    We'd like to get an array of map.keys() in a variable and then apply array-specific methods to it, e.g. .push .
+    but that doesn't work:
+    let map = new Map();
+    
+    map.set("name", "John");
+
+    let keys = map.keys();
+
+    // Error: keys.pushed is not a function
+    keys.push("more");
+
+    Why? How can we fix the code to make keys.push work?
+*/
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys()); // Solution: add Array.from()
+console.log(keys);
+
+keys.push("more");
+console.log(keys);
