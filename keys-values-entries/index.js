@@ -39,11 +39,7 @@ console.log(sumSalaries(salaries));
 */
 
 function count(obj) {
-    let countProp = 0;
-    for (const prop of Object.keys(obj)) {
-        countProp += 1;
-    }
-    return countProp;
+    return Object.keys(obj).length;
 }
 
 let user = {
