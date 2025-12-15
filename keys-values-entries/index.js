@@ -8,8 +8,6 @@
     If salaries is empty, then result must be 0.
 */
 function sumSalaries(salaries) {
-    if (!Object.entries(salaries).length === 0) return 0;
-
     let totalSalaries = 0;
     for (const salary of Object.values(salaries)) {
         totalSalaries += salary;
@@ -23,3 +21,34 @@ let salaries = {
 };
 
 console.log(sumSalaries(salaries));
+
+/* 
+    Task 2
+    Count properties
+    Write a function count(obj) that returns the number of properties in the object:
+
+    let user = {
+        name: 'John',
+        age: 30,
+    };
+
+    console.log(count(user));
+
+    try to make the code as short as possible.
+    P.S. Ignore symbolic properties, count only "reguler" ones.
+*/
+
+function count(obj) {
+    let countProp = 0;
+    for (const prop of Object.keys(obj)) {
+        countProp += 1;
+    }
+    return countProp;
+}
+
+let user = {
+    name: "John",
+    age: 30,
+};
+
+console.log(count(user));
