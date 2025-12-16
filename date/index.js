@@ -42,3 +42,27 @@ function getLocalDay(date) {
 
 date = new Date(2012, 0, 3);
 alert(getLocalDay(date));
+
+/* 
+    Task 4
+    Which day of month was many days ago?
+
+    Create a function getDateAgo(date, days) to return the day of month days ago from the date.
+
+    for instance, if today is 20th, then getDateAgo(new Date(), 1) should be 19th and getDateAgo(new Date(), 2) should be 18th.
+
+    Should work reliably for days=365 or more
+
+    P.S. The function should not modify the given date.
+*/
+function getDateAgo(date, days) {
+    let daysAgo = new Date(date);
+    daysAgo.setDate(date.getDate() - days);
+    return daysAgo.getDate();
+}
+
+date = new Date(2015, 0, 2);
+
+console.log(getDateAgo(date, 1));
+console.log(getDateAgo(date, 2));
+console.log(getDateAgo(date, 365));
