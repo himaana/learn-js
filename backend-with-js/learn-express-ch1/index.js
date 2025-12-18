@@ -19,6 +19,10 @@ app.get("/api/user", (req, res) => {
     res.json({ name: "Naufal", role: "Developer" });
 });
 
+app.get("/not-found", (req, res) => {
+    res.status(404).send("Page not found");
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
