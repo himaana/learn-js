@@ -15,6 +15,10 @@ app.get("/contact", (req, res) => {
     res.send("Contact Page");
 });
 
+app.get("/api/user", (req, res) => {
+    res.json({ name: "Naufal", role: "Developer" });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
